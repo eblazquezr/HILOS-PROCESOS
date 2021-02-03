@@ -1,0 +1,25 @@
+
+public class Cliente extends Thread{
+	
+	private Peluqueria peluqueria;
+	private int dni;
+	
+	public Cliente(Peluqueria peluqueria, int dni) {
+		super();
+		this.peluqueria = peluqueria;
+		this.dni = dni;
+	}
+
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+		
+		peluqueria.entrar(dni);
+		peluqueria.salir(dni);
+	}
+	
+
+}

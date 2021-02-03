@@ -1,0 +1,27 @@
+
+public class Principal {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		int numcoche=5;
+		int numcamion=110;
+		int park[]=new int [3];
+		for (int i = 0; i < park.length; i++) {
+			park[i]=0;
+		}
+		Parking p = new Parking(park);
+		for (int i = 1; i <= numcoche; i++) {
+			Coche c =new Coche(p,i);
+			c.start();
+			Thread.sleep(20);
+		}
+		
+		for (int i = 100; i <=numcamion; i++) {
+			Camion ca= new Camion(p, i)	;
+			ca.start();
+			Thread.sleep(20);
+		}
+		p.vanaentrar();
+	}
+
+}

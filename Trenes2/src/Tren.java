@@ -1,0 +1,44 @@
+
+public class Tren extends Thread{
+	
+	private Estacion estacion;
+	private int numero;
+	
+	public Tren(Estacion estacion, int numero) {
+		super();
+		this.estacion = estacion;
+		this.numero = numero;
+	}
+	
+	private void tiempo() {
+		
+		int tiempo = (int)(Math.random()*2000);
+		try {
+			Thread.sleep(tiempo);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+		
+		
+			
+			estacion.entrar(numero);
+//			tiempo();
+			estacion.salir(numero);
+//			tiempo();
+			
+		
+
+		
+		
+	}
+
+}

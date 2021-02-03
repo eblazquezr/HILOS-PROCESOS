@@ -1,0 +1,17 @@
+
+public class PrincipalPrimero {
+
+	public static void main(String[] args) {
+		
+		ControlarPrimero c = new ControlarPrimero();
+		
+		for (int i = 0; i < 8; i++) {
+			
+			Orden o = new Orden(c,i+1);
+			o.start();
+		}
+		
+		c.mostrarCadena();
+	}
+	
+}

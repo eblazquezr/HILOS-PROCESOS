@@ -1,0 +1,16 @@
+
+public class PrincipalParkingCoches {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		Parking p = new Parking(5);
+		coche c = new coche(p);
+		
+		c.start();
+		c.join();
+		
+
+
+	}
+
+}

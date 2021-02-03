@@ -1,0 +1,25 @@
+
+public class PrincipalParkingCoches {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		Parking p = new Parking(5);
+		coche[] c = new coche[10];
+		
+		
+		for (int i = 0; i < c.length; i++) {
+			
+			 if(c.length>i+1) {
+				 c[i] = new coche(p,i+1);
+				 c[i+1] = new coche(p,i+2);
+				 c[i].start();
+				 c[i+1].start();
+			 }
+			
+		}
+		
+
+
+	}
+
+}

@@ -1,0 +1,28 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Controlador controlador = new Controlador(5);
+		ControladorDinero controladorDinero = new ControladorDinero();
+		
+	
+		
+		
+		Cliente[] cliente = new Cliente[10];
+		for (int i = 0; i < cliente.length; i++) {
+			
+			cliente[i] = new Cliente(controlador,i+1);
+			cliente[i].start();
+			
+		}
+		controladorDinero.esperar(controlador.getDinero());
+		
+		controladorDinero.continuar();
+		
+		System.out.println("TOTAL: "+controlador.getDinero());
+		
+
+	}
+
+}

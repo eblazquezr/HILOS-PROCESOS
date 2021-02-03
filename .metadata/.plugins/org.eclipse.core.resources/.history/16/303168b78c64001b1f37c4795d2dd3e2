@@ -1,0 +1,41 @@
+
+public class Coche extends Thread{
+
+	Parking p;
+	private int numcoche;
+	public Coche(Parking p, int numcoche ) {
+		// TODO Auto-generated constructor stub
+		this.p=p;
+		this.numcoche=numcoche;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+	
+
+		int random1= (int)(Math.random()*(100+10));
+		try {
+			sleep(random1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		p.lleganvehiculos(numcoche, "coche");
+	
+		
+		int random= (int)(Math.random()*(1000+100));
+		try {
+			sleep(random);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		p.salirvehiculos(numcoche);
+	}
+	
+	
+	
+}
+
+

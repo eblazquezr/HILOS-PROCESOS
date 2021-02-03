@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ControlarFilosofo"/>
+    <fullyQualifiedTypeName name="Filosofo"/>
+    <fullyQualifiedTypeName name="ControlarBarbero"/>
+    <fullyQualifiedTypeName name="Barberia"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="Super"/>
+    <fullyQualifiedTypeName name="ControlarRelevos"/>
+    <fullyQualifiedTypeName name="Relevo"/>
+    <fullyQualifiedTypeName name="ControlarTren"/>
+    <fullyQualifiedTypeName name="ControlarNotas"/>
+    <fullyQualifiedTypeName name="Profesor"/>
+    <fullyQualifiedTypeName name="ControlarParking"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="Juez"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="Parking"/>
+    <fullyQualifiedTypeName name="Coches"/>
+    <fullyQualifiedTypeName name="Camiones"/>
+    <fullyQualifiedTypeName name="java.util.FormatterClosedException"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.spi.SyncResolver"/>
+    <fullyQualifiedTypeName name="Coche"/>
+    <fullyQualifiedTypeName name="Peluqueria"/>
+    <fullyQualifiedTypeName name="Restaurante"/>
+    <fullyQualifiedTypeName name="Controlador"/>
+    <fullyQualifiedTypeName name="Dinero"/>
+</qualifiedTypeNameHistroy>

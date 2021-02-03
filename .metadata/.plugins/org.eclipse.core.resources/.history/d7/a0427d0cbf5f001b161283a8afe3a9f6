@@ -1,0 +1,23 @@
+
+public class PrincipalPrimero {
+
+	public static void main(String[] args) {
+		
+		ControlarPrimero c = new ControlarPrimero();
+		
+		for (int i = 0; i < 2; i++) {
+			
+			Orden o = new Orden(c,i+1);
+			o.start();
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+
+	}
+
+}

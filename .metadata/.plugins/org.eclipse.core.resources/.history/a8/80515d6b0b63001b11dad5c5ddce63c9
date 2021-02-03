@@ -1,0 +1,26 @@
+
+public class coche extends Thread{
+	
+	private Parking	p;
+	private int matricula;
+	
+	coche(Parking p, int matricula){
+		
+		this.p = p;
+		this.matricula = matricula;
+		
+		
+	}
+	
+	@Override
+	public void run() {
+		
+		for (int i = 0; i < 10; i++) {
+			
+			p.entrar(matricula);
+			p.salir(matricula);
+		}
+		
+	}
+
+}

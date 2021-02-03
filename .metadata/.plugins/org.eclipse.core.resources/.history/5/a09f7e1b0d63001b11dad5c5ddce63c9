@@ -1,0 +1,32 @@
+
+public class coche extends Thread{
+	
+	private Parking	p;
+
+	coche(Parking p){
+		
+		this.p = p;
+		
+		
+		
+	}
+	
+	@Override
+	public void run() {
+		
+		while(true) {
+			
+			for (int i = 0; i < 10; i++) {
+				
+				p.entrar(i+1);
+				
+				p.salir(i+1);
+				
+				
+			}
+
+		}
+		
+	}
+
+}

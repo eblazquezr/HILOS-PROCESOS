@@ -1,0 +1,40 @@
+
+public class coche extends Thread{
+	
+	private Parking	p;
+	private int matricula;
+	
+	coche(Parking p, int matricula){
+		
+		this.p = p;
+		this.matricula = matricula;
+		
+		
+	}
+	
+	private void tiempo() {
+		
+		int tiempo = (int)(Math.random()*2000);
+		try {
+			Thread.sleep(tiempo);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Override
+	public void run() {
+		
+		for (int i = 0; i < 7; i++) {
+			
+			p.entrar(matricula);
+			p.salir(matricula);	
+			
+		}
+		
+		
+	}
+
+}

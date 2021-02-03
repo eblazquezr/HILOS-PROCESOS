@@ -1,0 +1,41 @@
+
+public class MainTrenes {
+
+	public static void main(String[] args) {
+
+		Estacion estacion = new Estacion();
+		
+//		for (int i = 0; i < 10; i++) {
+//			
+//			Tren tren = new Tren(estacion,i+1);
+//			tren.start();
+//			try {
+//				tren.join();
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			
+//		}
+
+		
+		Tren tren1 = new Tren(estacion,1);
+		tren1.start();
+		Tren tren2 = new Tren(estacion,2);
+			 tren2.start();
+		Tren tren3 = new Tren(estacion,3);
+			 tren3.start();
+		
+		try {
+			tren1.join();
+			tren2.join();
+			tren3.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

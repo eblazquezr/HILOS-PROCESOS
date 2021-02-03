@@ -1,0 +1,32 @@
+
+public class PrincipalCarrera {
+
+	public static void main(String[] args) {
+		
+		Pista pista = new Pista();
+		
+		for (int i = 0; i < 5; i++) {
+			
+			Corredor corredor = new Corredor(pista,i+1,5);
+			corredor.start();
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+						
+		}
+		Juez juez = new Juez(pista);
+		juez.start();
+		
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

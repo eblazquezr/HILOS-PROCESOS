@@ -1,0 +1,108 @@
+
+public class Parking {
+	boolean barrera=false;
+	int[] park;
+	int plazasocupadas=0;
+	public Parking( int [] park) {
+		// TODO Auto-generated constructor stub
+		this.park=park;
+	}
+	
+	public synchronized void lleganvehiculos(int numvehiculo, String tipovehiculo)
+	{
+		while(!barrera)
+		{
+			try {
+				
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	comprobarvehiculos(numvehiculo, tipovehiculo);
+		
+	}
+	public synchronized void vanaentrar()
+	{
+		notify();
+		barrera=true;
+		
+	}
+	public synchronized void comprobarvehiculos(int numvehiculo,String tipovehiculo)
+	{
+		boolean cocheaparcado=false;
+		
+		for (int i = 0; i < park.length&&!cocheaparcado; i++) {
+			 
+			if(tipovehiculo.equalsIgnoreCase("camion")&& park[i]==0 && i<park.length-1 && park[i+1]==0 )
+			{
+				System.out.println("Entra: el camion " + numvehiculo);
+				System.out.println("Aparca en  " + i + (i+1));
+		
+				park[i]=numvehiculo;
+				park[i+1]=numvehiculo;
+				plazasocupadas++;
+				plazasocupadas++;
+				System.out.println("Plazas libres:" + (park.length-plazasocupadas));
+				cocheaparcado=true;
+				barrera=true;
+				notify();
+				
+			}
+			
+			if(tipovehiculo.equalsIgnoreCase("coche")&& park[i]==0  )
+			{
+				System.out.println("Entra: el coche " + numvehiculo);
+				System.out.println("Aparca en  " + i);
+				park[i]=numvehiculo;
+				plazasocupadas++;
+				System.out.println("Plazas libres:" + (park.length-plazasocupadas));
+				cocheaparcado=true;
+				barrera=true;
+				notify();
+			}
+		}
+		if(!cocheaparcado)
+		{
+			barrera=false;
+			lleganvehiculos(numvehiculo, tipovehiculo);
+		}
+		else
+		{
+			for (int i = 0; i < park.length; i++) {
+				System.out.print(" ["+park[i]+"] ");
+			}
+			System.out.println("");
+		}	
+		
+		
+	}
+	public synchronized void salirvehiculos(int numvehiculo)
+	{
+		
+		
+		for (int i = 0; i < park.length; i++) {
+			if(park[i]==numvehiculo )
+			{
+				park[i]=0;
+				
+				plazasocupadas--;				
+			}
+		
+		}
+		System.out.println("El vehiculo " + numvehiculo + " ha salido");
+	
+		
+		notify();
+		barrera=true;
+		
+		
+	}
+	
+	
+	
+	
+	
+}

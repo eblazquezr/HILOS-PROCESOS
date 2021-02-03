@@ -1,0 +1,56 @@
+
+// LOS TENGO EN CLASES DISTINTAS
+
+public class PrincipalParking2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		ControlarParking c = new ControlarParking(5);
+		
+		Coche[] coche = new Coche[5];
+		Camion[] camion = new Camion[10];
+		
+		for (int i = 0; i < 25; i++) {
+			
+			int matriculaCoche=0,matriculaCamion=0;
+
+			if(i>4) {
+				 matriculaCoche = restar(3,i);
+				 
+			}
+			if(i>10) {
+				matriculaCamion = restar(9,i);
+			}
+			
+			coche[matriculaCoche] = new Coche(c,i,0);
+			coche[matriculaCoche].start();
+			
+			camion[matriculaCamion] = new Camion(c,matriculaCamion+100,1);
+			camion[matriculaCamion].start();
+			
+			
+			
+
+		}
+
+	}
+	
+	public static int restar(int numero, int mayor) {
+		
+		int entero = mayor;
+		
+		if(entero>numero) {
+			
+			do {
+				
+				entero -=numero; 
+				
+				
+			} while (entero>numero);
+		}
+		
+		return entero;
+	}
+	
+
+}

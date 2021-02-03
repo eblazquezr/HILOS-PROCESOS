@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrincipalParkingCoches {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		Parking p = new Parking(5);
+		coche[] c = new coche[10];
+		
+		
+
+		coche coche=new coche(p,1);
+		List<coche> coches=new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			coche =new coche(p,i+1);
+			coches.add(coche);
+			coche.start();
+		}
+		
+		for(coche temp:coches) {
+			try {
+				
+				temp.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+
+	}
+
+}

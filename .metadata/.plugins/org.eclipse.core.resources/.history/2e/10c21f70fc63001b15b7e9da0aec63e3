@@ -1,0 +1,37 @@
+
+public class Clase {
+	
+	private boolean bandera = false;
+	
+	
+	public void saludoAlumnos(int numero) {
+		
+		while(!bandera) {
+			
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		bandera = true;
+		System.out.println("Alumno "+numero+" buenos dias profesor");
+		notify();
+	}
+	
+	
+	public void saludoProfesor(String nombre) {
+		
+		System.out.println("Soy el profesor "+nombre);
+		bandera = true;
+		notify();
+		
+		
+	}
+	
+	
+
+}

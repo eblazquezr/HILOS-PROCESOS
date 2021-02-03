@@ -1,0 +1,41 @@
+
+public class ControlarPrimero {
+	
+	private boolean controlar = false;
+	
+	public synchronized void par(int numero) {
+		
+		controlar = comprobar(numero);
+		
+		System.out.println(controlar);
+		
+		// PAR
+		if(!controlar) {
+			
+			System.out.println("Hola, soy thread "+numero);
+			notify();
+			
+		}
+		else {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	public boolean comprobar(int numero) {
+		if(numero%2!=0) {
+			
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+
+}

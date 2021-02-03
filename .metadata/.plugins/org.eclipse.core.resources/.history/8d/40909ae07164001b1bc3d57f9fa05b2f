@@ -1,0 +1,34 @@
+
+public class PrincipalParkingCoches {
+
+	public static void main(String[] args) {
+		
+		Parking p = new Parking(5);
+		coche[] c = new coche[10];
+		
+		
+		for (int i = 0; i < c.length; i++) {
+			
+			 c[i] = new coche(p,i+1);
+			 
+			 c[i].start();
+			 
+			
+		}
+		
+		for (int i = 0; i < c.length; i++) {
+			
+			try {
+				c[i].join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+
+
+	}
+
+}

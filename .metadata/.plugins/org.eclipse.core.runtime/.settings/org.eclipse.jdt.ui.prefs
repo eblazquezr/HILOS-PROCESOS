@@ -1,0 +1,7 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="ControlarFilosofo"><rhs name\="ControlarFilosofo"/></lhs><lhs name\="java.lang.Thread"><rhs name\="Filosofo"/><rhs name\="Barberia"/><rhs name\="Coche"/><rhs name\="Super"/><rhs name\="Relevo"/><rhs name\="Coches"/><rhs name\="Camiones"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="Filosofo"/><rhs name\="Barberia"/><rhs name\="Coche"/><rhs name\="Super"/><rhs name\="Relevo"/><rhs name\="Coches"/><rhs name\="Camiones"/></lhs><lhs name\="Filosofo"><rhs name\="Filosofo"/></lhs><lhs name\="ControlarBarbero"><rhs name\="ControlarBarbero"/></lhs><lhs name\="Barberia"><rhs name\="Barberia"/></lhs><lhs name\="ControlarParking"><rhs name\="ControlarParking"/></lhs><lhs name\="Coche"><rhs name\="Coche"/></lhs><lhs name\="Super"><rhs name\="Super"/></lhs><lhs name\="ControlarRelevos"><rhs name\="ControlarRelevos"/></lhs><lhs name\="Relevo"><rhs name\="Relevo"/></lhs><lhs name\="ControlarTren"><rhs name\="ControlarTren"/></lhs><lhs name\="Peluqueria"><rhs name\="Peluqueria"/></lhs><lhs name\="Parking"><rhs name\="Parking"/></lhs><lhs name\="Coches"><rhs name\="Coches"/></lhs><lhs name\="Camiones"><rhs name\="Camiones"/></lhs><lhs name\="Restaurante"><rhs name\="Restaurante"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=20
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

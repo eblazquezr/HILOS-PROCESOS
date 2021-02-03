@@ -1,0 +1,32 @@
+
+public class coche extends Thread{
+	
+	private Parking	p;
+	private int matricula;
+	
+	coche(Parking p, int matricula){
+		
+		this.p = p;
+		this.matricula = matricula;
+		
+		
+	}
+	
+	@Override
+	public void run() {
+		
+		while(true) {
+			
+			p.entrar(matricula);
+			try {
+				Thread.sleep((int)(Math.random()*2000-1500));
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			p.salir(matricula);
+		}
+		
+	}
+
+}

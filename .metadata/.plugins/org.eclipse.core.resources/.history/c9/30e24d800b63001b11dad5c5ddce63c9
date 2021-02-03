@@ -1,0 +1,23 @@
+
+public class PrincipalParkingCoches {
+
+	public static void main(String[] args) {
+		
+		Parking p = new Parking(5);
+		
+		for (int i = 0; i < 6; i++) {
+			
+			coche c = new coche(p,i+1);
+			c.start();
+			try {
+				c.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+
+	}
+
+}

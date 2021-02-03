@@ -1,0 +1,34 @@
+
+public class Orden extends Thread{
+	
+	private ControlarPrimero con;
+	private int numero;
+	
+	Orden(ControlarPrimero c, int entero){
+		
+		con = c;
+		numero = entero;
+		
+	}
+
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+		
+		if(numero==2) {
+			
+			con.cambiar();
+		}
+		
+		try {
+			con.mostrar(numero);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

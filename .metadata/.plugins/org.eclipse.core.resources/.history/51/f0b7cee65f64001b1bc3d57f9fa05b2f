@@ -1,0 +1,33 @@
+
+public class PrincipalSaludo {
+
+	public static void main(String[] args) {
+		
+		Clase clase = new Clase();
+		
+		for (int i = 0; i < 5; i++) {
+			
+			Alumno alumno = new Alumno(clase,i+1);
+			alumno.start();
+			
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		Profesor profesor = new Profesor(clase,"Ernesto");
+		profesor.start();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
